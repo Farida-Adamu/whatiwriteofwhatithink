@@ -310,24 +310,77 @@ ul, ol {
   color: var(--warm-grey);
 }
 
+/* --- Browse Bar --- */
+.browse-bar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.browse-bar__label {
+  font-family: var(--font-meta);
+  font-weight: 400;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--warm-grey);
+  letter-spacing: 0.1em;
+  flex-shrink: 0;
+}
+
+.browse-bar__pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.browse-pill {
+  font-family: var(--font-meta);
+  font-weight: 400;
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  background: none;
+  border: 1px solid var(--rule);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+  letter-spacing: 0.02em;
+}
+
+.browse-pill:hover {
+  border-color: var(--sand);
+  color: var(--ink);
+}
+
+.browse-pill.active {
+  background-color: var(--ink);
+  color: var(--cream);
+  border-color: var(--ink);
+}
+
 /* --- Posts Grid --- */
 .posts-section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem) clamp(3rem, 6vw, 5rem);
   border-top: 1px solid var(--rule);
-  padding-top: clamp(3rem, 6vw, 5rem);
 }
 
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  border-top: 1px solid var(--rule);
+  border-left: 1px solid var(--rule);
+  margin-top: 1.5rem;
 }
 
 .post-card {
   padding: 2rem;
-  border-radius: 4px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
   transition: background-color 200ms ease;
   position: relative;
   cursor: pointer;
@@ -789,6 +842,10 @@ ul, ol {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .browse-bar {
+    flex-wrap: wrap;
+  }
+
   .about-strip__inner {
     grid-template-columns: 1fr;
   }
@@ -813,7 +870,13 @@ ul, ol {
   }
 
   .post-card {
-    padding: 1.5rem 0;
+    padding: 1.5rem;
+  }
+
+  .browse-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
   }
 
   .footer {

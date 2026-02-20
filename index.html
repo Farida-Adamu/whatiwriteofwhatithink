@@ -49,8 +49,7 @@
     <section class="hero">
       <div class="hero__left">
         <p class="hero__eyebrow">journal &amp; essays</p>
-        <h1 class="hero__title">A journal of observation, argument, and the attempt to make sense of the world.</h1>
-        <p class="hero__subtitle">By writing it down. All of it &mdash; the ideas, the questions, the things I almost tweeted and the things I couldn't say in fewer than a thousand words.</p>
+        <h1 class="hero__title">A journal of observation, argument, and an attempt to make sense of the world.</h1>
       </div>
       <div class="hero__right">
         <p class="hero__recent-label">recent writing</p>
@@ -59,19 +58,19 @@
           <div class="hero__recent-item">
             <p class="hero__recent-tag">the eye</p>
             <h3 class="hero__recent-title"><a href="article.html">The Colour of Sound: On Listening to Jazz With Your Eyes Open</a></h3>
-            <p class="hero__recent-date">14 Feb 2026</p>
+            <p class="hero__recent-date">14.02.2026</p>
           </div>
 
           <div class="hero__recent-item">
             <p class="hero__recent-tag">market note</p>
             <h3 class="hero__recent-title"><a href="article.html">Why Every African Fintech Deck Says the Same Thing</a></h3>
-            <p class="hero__recent-date">08 Feb 2026</p>
+            <p class="hero__recent-date">08.02.2026</p>
           </div>
 
           <div class="hero__recent-item">
             <p class="hero__recent-tag">from here</p>
             <h3 class="hero__recent-title"><a href="article.html">The Theory of Homesickness, Revised</a></h3>
-            <p class="hero__recent-date">01 Feb 2026</p>
+            <p class="hero__recent-date">01.02.2026</p>
           </div>
 
         </div>
@@ -80,64 +79,75 @@
 
     <!-- Posts Grid -->
     <section class="posts-section">
+      <div class="browse-bar">
+        <span class="browse-bar__label">browse by</span>
+        <div class="browse-bar__pills">
+          <button class="browse-pill active" data-filter="all">all</button>
+          <button class="browse-pill" data-filter="the-eye">the eye</button>
+          <button class="browse-pill" data-filter="the-world">the world</button>
+          <button class="browse-pill" data-filter="market-note">market note</button>
+          <button class="browse-pill" data-filter="the-machine">the machine</button>
+          <button class="browse-pill" data-filter="from-here">from here</button>
+        </div>
+      </div>
       <div class="posts-grid">
 
-        <article class="post-card">
+        <article class="post-card" data-category="the-world">
           <p class="post-card__tag">the world</p>
-          <h3 class="post-card__title"><a href="article.html">What Abuja Teaches You About Silence and Space</a></h3>
+          <h3 class="post-card__title"><a href="article.html">What Paris Teaches You About Silence and Space</a></h3>
           <p class="post-card__excerpt">There is a geometry to the city that insists on emptiness. Not absence &mdash; emptiness. The kind that holds something.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">28 Jan 2026</span>
+            <span class="post-card__date">28.01.2026</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card" data-category="the-machine">
           <p class="post-card__tag">the machine</p>
           <h3 class="post-card__title"><a href="article.html">Regression to the Mean: A Love Letter to Boring Models</a></h3>
           <p class="post-card__excerpt">Everyone wants the neural net. Nobody wants to check if a linear model would have done the job in a tenth of the time.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">22 Jan 2026</span>
+            <span class="post-card__date">22.01.2026</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card" data-category="the-eye">
           <p class="post-card__tag">the eye</p>
           <h3 class="post-card__title"><a href="article.html">On Rewatching &lsquo;In the Mood for Love&rsquo; at Thirty</a></h3>
           <p class="post-card__excerpt">The corridors are narrower than I remembered. The longing is wider.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">15 Jan 2026</span>
+            <span class="post-card__date">15.01.2026</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card" data-category="market-note">
           <p class="post-card__tag">market note</p>
           <h3 class="post-card__title"><a href="article.html">The Consulting Trap: When Strategy Becomes Performance</a></h3>
           <p class="post-card__excerpt">A deck is not a plan. A framework is not an answer. And yet we bill for both as if they were.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">10 Jan 2026</span>
+            <span class="post-card__date">10.01.2026</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card" data-category="from-here">
           <p class="post-card__tag">from here</p>
           <h3 class="post-card__title"><a href="article.html">Baden, June, the River, and What I Understood After</a></h3>
           <p class="post-card__excerpt">I put my feet in and something broke open. Not dramatically. Just enough to let the light in sideways.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">03 Jan 2026</span>
+            <span class="post-card__date">03.01.2026</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
 
-        <article class="post-card">
+        <article class="post-card" data-category="the-world">
           <p class="post-card__tag">the world</p>
           <h3 class="post-card__title"><a href="article.html">Notes on Leaving a Country You Haven&rsquo;t Left Yet</a></h3>
           <p class="post-card__excerpt">Departure starts long before the airport. It begins the moment you stop defending the place to strangers.</p>
           <div class="post-card__footer">
-            <span class="post-card__date">28 Dec 2025</span>
+            <span class="post-card__date">28.12.2025</span>
             <span class="post-card__arrow">&rarr;</span>
           </div>
         </article>
@@ -152,14 +162,12 @@
           <h2 class="about-strip__heading">A journal by<br>Farida Adamu</h2>
           <div class="about-strip__meta">
             <p>Farida Adamu</p>
-            <p>Abuja, Nigeria</p>
+            <p>Paris, France</p>
           </div>
         </div>
         <div class="about-strip__right">
           <div class="about-strip__text">
-            <p>Daniel Kahneman kept a journal he called whatiwriteofwhatithink. I stumbled on this while preparing to teach &mdash; I was reading about his Nobel Prize, building a class on decision-making &mdash; and something in me went quiet. That&rsquo;s it, I thought. That&rsquo;s what I&rsquo;ve been doing.</p>
-            <p>I have been writing since before I knew why. A personal blog for the thoughts I almost tweeted. A business blog for the ideas I needed to argue out loud before I believed them. Essays nobody asked for, sent to nobody.</p>
-            <p>The only way I know how to process the world is to write it. This is where I do that. All of it.</p>
+            <p>Daniel Kahneman, kept a journal he called what i write of what i think. I stumbled on this after stumbling on his nobel-prize reading page, while preparing to teach a class on decision-making. I decided to name my blog after his journal.</p>
           </div>
           <a href="about.html" class="about-strip__link">read more about this journal &rarr;</a>
         </div>

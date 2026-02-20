@@ -33,9 +33,30 @@
   // Make entire card clickable via the first link inside it
   document.querySelectorAll('.post-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') return; // let actual links work normally
+      if (e.target.tagName === 'A') return;
       var link = card.querySelector('a');
       if (link) link.click();
+    });
+  });
+
+  // --- Browse By Filter ---
+  var pills = document.querySelectorAll('.browse-pill');
+  var cards = document.querySelectorAll('.post-card[data-category]');
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+
+      var filter = pill.getAttribute('data-filter');
+
+      cards.forEach(function (card) {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
   });
 
